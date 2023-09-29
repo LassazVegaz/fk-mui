@@ -1,1 +1,1 @@
-export * from "./FMUITextField";
+export { default as FMUITextField } from "./FMUITextField";
