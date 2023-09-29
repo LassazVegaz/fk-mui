@@ -2,7 +2,7 @@
 	"name": "formikmui",
 	"version": "1.0.0",
 	"description": "Formik + MUI components",
-	"module": "dist/index.js",
+	"main": "dist/index.js",
 	"type": "module",
 	"author": "Lasindu Nuwanga <lasindunuwanga@gmail.com>",
 	"license": "MIT",
