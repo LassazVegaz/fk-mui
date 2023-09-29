@@ -18,15 +18,6 @@ const config: Config = {
 	// Module file extensions for importing
 	moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
 
-	// The root of your source code, typically /src
-	// `<rootDir>` is a token Jest substitutes
-	roots: ["<rootDir>/src"],
-
-	setupFilesAfterEnv: [
-		"@testing-library/react/cleanup-after-each",
-		"@testing-library/jest-dom/extend-expect",
-	],
-
 	// The test environment that will be used for testing
 	testEnvironment: "jsdom",
 
