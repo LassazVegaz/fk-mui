@@ -1,7 +1,7 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import { useFormik } from "formik";
-import FMUITextField from "./FMUITextField";
+import FMUITextField from "../src/FMUITextField/FMUITextField";
 
 const TestOneComponent = () => {
 	const form = useFormik({
