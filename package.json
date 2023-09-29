@@ -6,6 +6,21 @@
 	"type": "module",
 	"author": "Lasindu Nuwanga <lasindunuwanga@gmail.com>",
 	"license": "MIT",
+	"homepage": "https://github.com/LassazVegaz/formikmui#readme",
+	"bugs": {
+		"url": "https://github.com/LassazVegaz/formikmui/issues",
+		"email": "lasindunuwanga@gmail.com"
+	},
+	"keywords": [
+		"formik",
+		"mui",
+		"react",
+		"typescript"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/LassazVegaz/formikmui.git"
+	},
 	"scripts": {
 		"build": "tsc",
 		"lint": "eslint . --ext .ts,.tsx",
