@@ -16,7 +16,7 @@ const FMUITextField = <T,>(props: FMUITextFieldProps<T>) => {
 			hasError,
 			message: hasError ? form.errors[name]!.toString() : null,
 		};
-	}, []);
+	}, [form.errors, form.touched, name]);
 
 	return (
 		<TextField

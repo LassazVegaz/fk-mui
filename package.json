@@ -1,17 +1,25 @@
 {
-  "name": "formikmui",
-  "version": "1.0.0",
-  "description": "Formik + MUI components",
-  "main": "index.js",
-  "author": "Lasindu Nuwanga <lasindunuwanga@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "@mui/material": "^5.14.11",
-    "formik": "^2.4.5",
-    "react": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.2.23",
-    "typescript": "^5.2.2"
-  }
+	"name": "formikmui",
+	"version": "1.0.0",
+	"description": "Formik + MUI components",
+	"main": "index.js",
+	"author": "Lasindu Nuwanga <lasindunuwanga@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"lint": "eslint . --ext .ts,.tsx"
+	},
+	"dependencies": {
+		"@mui/material": "^5.14.11",
+		"formik": "^2.4.5",
+		"react": "^18.2.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.2.23",
+		"@typescript-eslint/eslint-plugin": "^6.7.3",
+		"@typescript-eslint/parser": "^6.7.3",
+		"eslint": "^8.50.0",
+		"eslint-plugin-react": "^7.33.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"typescript": "^5.2.2"
+	}
 }
