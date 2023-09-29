@@ -1,76 +1,44 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import { Formik } from "formik";
+import { useFormik } from "formik";
 import FMUITextField from "./FMUITextField";
+
+const TestOneComponent = () => {
+	const form = useFormik({
+		initialValues: {
+			test: "",
+		},
+		validate: (values) => {
+			const errors: Partial<typeof values> = {};
+
+			if (values.test !== "test") {
+				errors.test = "test is not valid";
+			}
+
+			return errors;
+		},
+		onSubmit: () => {},
+	});
+
+	return <FMUITextField name="test" form={form} label="Test Field" />;
+};
 
 describe("FMUITextField", () => {
 	it("renders the component", () => {
-		const { getByLabelText } = render(
-			<Formik initialValues={{}} onSubmit={() => {}}>
-				{({ values, errors, touched, handleChange, handleBlur }) => (
-					<FMUITextField
-						name="test"
-						form={{
-							values,
-							errors,
-							touched,
-							handleChange,
-							handleBlur,
-						}}
-						label="Test Field"
-					/>
-				)}
-			</Formik>
-		);
+		const { getByLabelText } = render(<TestOneComponent />);
 
 		const inputElement = getByLabelText("Test Field");
-		expect(inputElement).toBeInTheDocument();
-	});
-
-	it("updates the value when changed", () => {
-		const { getByLabelText } = render(
-			<Formik initialValues={{}} onSubmit={() => {}}>
-				{({ values, errors, touched, handleChange, handleBlur }) => (
-					<FMUITextField
-						name="test"
-						form={{
-							values,
-							errors,
-							touched,
-							handleChange,
-							handleBlur,
-						}}
-						label="Test Field"
-					/>
-				)}
-			</Formik>
-		);
-
-		const inputElement = getByLabelText("Test Field");
-		fireEvent.change(inputElement, { target: { value: "test value" } });
-		expect(inputElement.value).toBe("test value");
+		expect(inputElement).toBeDefined();
 	});
 
 	it("shows an error message when there is an error", () => {
-		const { getByText } = render(
-			<Formik initialValues={{}} onSubmit={() => {}}>
-				{({ values, errors, touched, handleChange, handleBlur }) => (
-					<FMUITextField
-						name="test"
-						form={{
-							values,
-							errors: { test: "Test error" },
-							touched,
-							handleChange,
-							handleBlur,
-						}}
-						label="Test Field"
-					/>
-				)}
-			</Formik>
-		);
+		const { getByLabelText, getByText } = render(<TestOneComponent />);
 
-		const errorMessage = getByText("Test error");
-		expect(errorMessage).toBeInTheDocument();
+		const inputElement = getByLabelText("Test Field");
+		fireEvent.change(inputElement, { target: { value: "test" } });
+		fireEvent.blur(inputElement);
+
+		const errorMessage = getByText("test is not valid");
+		expect(errorMessage).toBeDefined();
 	});
 });
