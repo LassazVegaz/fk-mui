@@ -1,6 +1,8 @@
-import { useEffect, useMemo } from "react";
-import { TextField, type TextFieldProps } from "@mui/material";
-import { type FormikProps } from "formik";
+import { useMemo } from "react";
+import TextField, {
+	type TextFieldProps,
+} from "@mui/material/TextField/TextField";
+import { type FormikProps } from "formik/dist/types";
 
 /**
  * Props of `FMUITextField`
@@ -15,6 +17,7 @@ export type FMUITextFieldProps<T> = TextFieldProps & {
 
 /**
  * MUI TextField with Formik integration. `name` and `form` are required.
+ * @template T Type of formik form values
  */
 const FMUITextField = <T,>(props: FMUITextFieldProps<T>) => {
 	const { name, form, ...rest } = props;
@@ -26,10 +29,6 @@ const FMUITextField = <T,>(props: FMUITextFieldProps<T>) => {
 			message: hasError ? form.errors[name]!.toString() : null,
 		};
 	}, [form.errors, form.touched, name]);
-
-	useEffect(() => {
-		console.log(error);
-	}, [error]);
 
 	return (
 		<TextField
