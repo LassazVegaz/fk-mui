@@ -1,6 +1,32 @@
-import { Box, Button, Container, TextField, Typography } from "@mui/material";
+import { Box, Button, Container, Typography } from "@mui/material";
+import { useFormik } from "formik";
+import * as yup from "yup";
+import { FMUITextField } from "formikmui";
+
+const initialValues = {
+	name: "",
+	email: "",
+	password: "",
+};
+
+const validationSchema = yup.object({
+	name: yup.string().required("Name is required"),
+	email: yup.string().email("Email is invalid").required("Email is required"),
+	password: yup
+		.string()
+		.min(6, "Password must be at least 6 characters")
+		.required("Password is required"),
+});
 
 function App() {
+	const form = useFormik({
+		initialValues,
+		validationSchema,
+		onSubmit: (values) => {
+			console.log(values);
+		},
+	});
+
 	return (
 		<Container
 			sx={{
@@ -16,8 +42,9 @@ function App() {
 			</Typography>
 
 			<Box
-				mt={10}
 				component="form"
+				onSubmit={form.handleSubmit}
+				mt={10}
 				display="flex"
 				flexDirection="column"
 				gap={2}
@@ -25,9 +52,20 @@ function App() {
 				width="100%"
 				mx="auto"
 			>
-				<TextField label="Name" fullWidth />
-				<TextField label="Email" fullWidth />
-				<TextField label="Password" fullWidth />
+				<FMUITextField form={form} name="name" label="Name" fullWidth />
+				<FMUITextField
+					form={form}
+					name="email"
+					label="Email"
+					fullWidth
+				/>
+				<FMUITextField
+					form={form}
+					name="password"
+					label="Password"
+					fullWidth
+					type="password"
+				/>
 
 				<Button
 					variant="outlined"
