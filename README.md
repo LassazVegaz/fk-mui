@@ -1,15 +1,16 @@
 # Typesafe Formik + MUI library
 
-    [![npm version](https://badge.fury.io/js/formikmui.svg)](https://badge.fury.io/js/formikmui)
-    [![npm downloads](https://img.shields.io/npm/dm/formikmui.svg)](https://www.npmjs.com/package/formikmui)
-    [![npm bundle size](https://img.shields.io/bundlephobia/min/formikmui)](https://www.npmjs.com/package/formikmui)
-    [![GitHub license](https://img.shields.io/github/license/abhishekraj272/formikmui)]
+<div align="center">
+    <img src="https://user-images.githubusercontent.com/4060187/61057426-4e5a4600-a3c3-11e9-9114-630743e05814.png" alt="formik" width="200px" height="200px" />
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="https://camo.githubusercontent.com/306dedb9426f1d93a981d305a0a18164932ece8dca4d5fd820b1d3c36625b218/68747470733a2f2f6d75692e636f6d2f7374617469632f6c6f676f2e737667" alt="mui" width="200px" height="200px" />    
+</div>
 
 - [Formik](https://formik.org/) is a form library for React
 
 - [MUI](https://mui.com/) is a library of React components
 
-Both of these libraries are very popular and widely used in the React community. There are many places where we have to use both of these libraries together. This library is a collection of components that are built using both of these libraries (for now only TextField component is available 🙂).
+Both of these libraries are very popular and widely used in the React community. There are many places where we have to use both of these libraries together. This library is a collection of components that are built using both of these libraries (for now only the TextField component is available 🙂).
 
 ## Installation
 
@@ -25,7 +26,7 @@ pnpm add formikmui
 
 ### FMUITextField
 
-This is a wrapper around MUI TextField component integrated with Formik. It has all the props that are available in MUI TextField component with two more props:
+This is a wrapper around the MUI TextField component integrated with Formik. It has all the props that are available in the MUI TextField component with two more props:
 
 - name: string - name of the field
 - form: Formk form
@@ -66,4 +67,4 @@ const MyForm = () => {
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-If you want to add a new component, I love to hear from you. Please open an issue first to discuss what you want to add.
+If you want to add a new component, I love to hear from you 💖. Please open an issue first to discuss what you want to add.
