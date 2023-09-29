@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 import TextField, { TextFieldProps } from "@mui/material/TextField";
 import { FormikProps } from "formik";
 
@@ -17,6 +17,10 @@ const FMUITextField = <T,>(props: FMUITextFieldProps<T>) => {
 			message: hasError ? form.errors[name]!.toString() : null,
 		};
 	}, [form.errors, form.touched, name]);
+
+	useEffect(() => {
+		console.log(error);
+	}, [error]);
 
 	return (
 		<TextField
