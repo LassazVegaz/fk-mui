@@ -3,21 +3,37 @@
 <div align="center">
     <img src="https://user-images.githubusercontent.com/4060187/61057426-4e5a4600-a3c3-11e9-9114-630743e05814.png" alt="formik" width="200px" height="200px" />
     &nbsp;&nbsp;&nbsp;&nbsp;
-    <img src="https://camo.githubusercontent.com/306dedb9426f1d93a981d305a0a18164932ece8dca4d5fd820b1d3c36625b218/68747470733a2f2f6d75692e636f6d2f7374617469632f6c6f676f2e737667" alt="mui" width="200px" height="200px" />    
+    <img src="https://camo.githubusercontent.com/306dedb9426f1d93a981d305a0a18164932ece8dca4d5fd820b1d3c36625b218/68747470733a2f2f6d75692e636f6d2f7374617469632f6c6f676f2e737667" alt="mui" width="200px" height="200px" />
 </div>
+<br />
+<br />
 
 - [Formik](https://formik.org/) is a form library for React
 
-- [MUI](https://mui.com/) is a library of React components
+- [MUI](https://mui.com/) is a React UI library
 
-Both of these libraries are very popular and widely used in the React community. There are many places where we have to use both of these libraries together. This library is a collection of components that are built using both of these libraries (for now only the TextField component is available 🙂).
+<br />
+
+Both of these libraries are very popular and widely used in the React community. There are many places where we have to use both of these libraries together. This library (fk-mui) is a collection of components that are built using both of these libraries to reduce the boilerplate code and make the development process faster 🏎️ (for now only the TextField component is available 🙂).
 
 ## Installation
 
+If you are using npm
+
 ```bash
-npm install formikmui
-yarn add formikmui
-pnpm add formikmui
+npm install fk-mui
+```
+
+If you are using yarn
+
+```bash
+yarn add fk-mui
+```
+
+If you are using pnpm
+
+```bash
+pnpm add fk-mui
 ```
 
 ## Available components
@@ -31,7 +47,8 @@ This is a wrapper around the MUI TextField component integrated with Formik. It 
 - name: string - name of the field
 - form: Formk form
 
-`name` should be a key of values of `form`
+`name` should be a key of values of `form`. Seat belts are on 🚗. If you are using TypeScript, it will give you an error if you pass a name that is not in the form.  
+This component will automatically populate `onChange`, `onBlur`, `value`, `error` and `helperText` for you. You don't have to do anything. Just pass the `name` and `form` props and you are good to go.
 
 #### Example
 
