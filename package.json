@@ -1,5 +1,5 @@
 {
-	"name": "formikmui",
+	"name": "fk-mui",
 	"version": "1.0.0",
 	"description": "Formik + MUI components",
 	"main": "dist/index.js",
