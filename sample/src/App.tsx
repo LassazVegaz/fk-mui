@@ -1,7 +1,7 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import { FMUITextField } from "formikmui";
+import { FMUITextField } from "fk-mui";
 
 const initialValues = {
 	name: "",
