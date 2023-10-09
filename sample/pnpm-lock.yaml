@@ -14,12 +14,12 @@ dependencies:
   '@mui/material':
     specifier: ^5.14.11
     version: 5.14.11(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.23)(react-dom@18.2.0)(react@18.2.0)
+  fk-mui:
+    specifier: link:..
+    version: link:..
   formik:
     specifier: ^2.4.5
     version: 2.4.5(react@18.2.0)
-  formikmui:
-    specifier: link:..
-    version: link:..
   react:
     specifier: ^18.2.0
     version: 18.2.0
