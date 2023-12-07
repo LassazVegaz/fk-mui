@@ -80,6 +80,11 @@ const MyForm = () => {
 };
 ```
 
+## SSR
+
+These components do not support Server Side Rendering because they need client interactivity. For example, the `FMUITextField` component needs to show errors dynamically when user changes the text input. It needs JavaScript in client side to do that.  
+These components are marked with `"use client"` and they will be rendered on client side.
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
