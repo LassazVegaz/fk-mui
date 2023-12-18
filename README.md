@@ -42,7 +42,7 @@ pnpm add fk-mui
 
 ### FMUITextField
 
-This is a wrapper around the MUI TextField component integrated with Formik. It has all the props that are available in the MUI TextField component with two more props:
+This is a wrapper around the MUI TextField component integrated with Formik. It has all the props that are available in the MUI TextField component with two additional props:
 
 - name: string - name of the field
 - form: Formk form
@@ -79,6 +79,11 @@ const MyForm = () => {
   );
 };
 ```
+
+## SSR
+
+These components do not support Server Side Rendering because they need client interactivity. For example, the `FMUITextField` component needs to show errors dynamically when user changes the text input. It needs JavaScript in client side to do that.  
+These components are marked with `"use client"` and they will be rendered on client side.
 
 ## Contributing
 
