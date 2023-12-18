@@ -29,17 +29,22 @@
   "peerDependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.14.11",
+    "@mui/material": "^5.15.0",
     "formik": "^2.4.5",
     "react": "^18.2.0"
   },
   "devDependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.15.0",
     "@types/react": "^18.2.45",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "formik": "^2.4.5",
+    "react": "^18.2.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
