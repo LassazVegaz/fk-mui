@@ -42,7 +42,7 @@ pnpm add fk-mui
 
 ### FMUITextField
 
-This is a wrapper around the MUI TextField component integrated with Formik. It has all the props that are available in the MUI TextField component with two more props:
+This is a wrapper around the MUI TextField component integrated with Formik. It has all the props that are available in the MUI TextField component with two additional props:
 
 - name: string - name of the field
 - form: Formk form
